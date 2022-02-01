@@ -1,0 +1,38 @@
+{% extends 'base.html'%}
+
+{%block title%} Contact {% endblock title %}
+
+{%block body%}
+<div class="container-fluid px-0">
+<img src="https://i0.wp.com/abhype.com/wp-content/uploads/2021/11/Contact-Us.jpg?resize=1024%2C427&ssl=1" class="d-block w-100" alt="...">
+</div>
+<div class="container" >
+<h1 class="text-center"> Contact Us </h1>
+<form method="post" action="/contact">
+    {% csrf_token %}
+    <div class="mb-3">
+        <label for="name" class="form-label">Name</label>
+        <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name">
+    </div>    
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Email address</label>
+      <input type="Email" class="form-control" id="Email1" name="Email" placeholder="Enter your message">
+    </div>
+    <div class="mb-3">
+      <label for="Contact No." class="form-label">Contact Number</label>
+      <input type="Contact" class="form-control" id="Contact" name="Contact" placeholder="Enter your contact">
+    </div>
+    <div class="mb-3">
+        <label for="Address" class="form-label">Address</label>
+        <input type="Address" class="form-control" id="Address" name="Address" >
+      </div>
+    <div class="mb-3 form-check">
+      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+      <label class="form-check-label" for="exampleCheck1">Check me out</label>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+
+
+
+ {% endblock body %}
